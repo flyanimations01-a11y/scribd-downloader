@@ -24,7 +24,7 @@ with sync_playwright() as playwright:
 	context = browser.new_context(storage_state="session.json" if 'session.json' in os.listdir('.') else None)
 
 	page = context.new_page()
-	page.goto('https://www.scribd.com/login', wait_until='domcontentloaded')
+	page.goto('https://www.everand.com', wait_until='domcontentloaded')
 
 	page.locator("div.user_row").wait_for(state='attached', timeout=0)
 
